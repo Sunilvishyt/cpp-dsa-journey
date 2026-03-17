@@ -6,7 +6,7 @@
  * Space Complexity: O(n)
 */
 
-//solution using KMP algorithm.
+//solution using LPS array.
 class Solution {
 public:
     string longestPrefix(string s) {
