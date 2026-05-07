@@ -75,3 +75,33 @@ public:
 
     }
 };
+
+//inplace modification solution (without using extra space)
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        //create dummy node so we wont need multiple if else statements
+        ListNode* head = new ListNode(0);
+        ListNode* tail = head;
+
+        while (list1 and list2){
+            if (list1->val <= list2->val){
+                tail->next = list1;
+                list1 = list1->next;
+                tail = tail->next;
+                tail->next = nullptr;
+            }
+            else {
+                tail->next = list2;
+                list2 = list2->next;
+                tail = tail->next;
+                tail->next = nullptr;
+            }
+        }
+
+        tail->next = list1? list1 : list2;
+        return head->next;
+    }
+};
+
+//note - we used dummy node to evade from checking multiple if else condition to check if head is empty everytime because with dummy node it will always be there.
