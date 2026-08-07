@@ -8,5 +8,5 @@ A collection of my solutions as I learn DSA.
   <li>Linked Lists</li>
   <li>Stack</li>
   <li>Queue</li>
-  <li>Trees -> binary, BST </li>
+  <li>Trees -> binary tree, BST </li>
 </ul>
